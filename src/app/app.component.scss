@@ -1,0 +1,73 @@
+.header, .terms-app {
+    padding: 1px;
+}
+
+::ng-deep .p-card .p-card-content {
+    padding: 0 0rem;
+}
+
+.add-term-btn {
+    
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	border-radius:50px;
+	text-align:center;
+}
+
+
+.add-term-btn ::ng-deep .p-button {
+    width: 75px;
+    height: 75px;
+    background: #2D2B43;
+    border: 1px solid #2D2B43;
+}
+
+
+.add-term-btn ::ng-deep .p-button:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: 0.3s;
+    span {
+        font-size: 22px;
+        transition: 0.1s;   
+    }
+}
+ 
+.add-term-btn ::ng-deep .p-button:active {
+    box-shadow: none; 
+    color: rgb(45, 43, 67);
+    border: 2px solid rgb(45, 43, 67);
+    transition: 0.2s;
+
+}
+
+.add-term  ::ng-deep .p-dialog {
+    height: 100%;
+    width: 25%;
+    background-color: rgba(247, 247, 247, 1);
+}
+
+.add-term ::ng-deep .p-dialog .p-dialog-header {
+    background: rgba(201,49,127,1);
+    color: #fff;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    background: rgb(45, 43, 67);
+    color: #fff;
+}
+
+.add-term ::ng-deep .p-dialog .p-dialog-content {
+    background: url('../assets/images/circles-pattern-v1-image.png');
+}
+
+::ng-deep .p-dialog .p-dialog-header-close-icon {
+    color: white;
+}
+
+::ng-deep .p-dialog .p-dialog-header-close-icon:hover {
+    color: rgb(45, 43, 67);
+}
+

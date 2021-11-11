@@ -1,0 +1,36 @@
+.new-term-form {
+    padding: 8px;
+}
+
+form input , textarea{
+    margin-top: 20px;
+}
+
+form ::ng-deep .p-button {
+    background-color: rgb(45, 43, 67);
+    border: 1px solid rgb(45, 43, 67);
+    width: 100%;
+}
+
+form ::ng-deep .p-button:hover {
+    background-color: rgba(201,49,127,1);
+    border: 1px solid rgba(201,49,127,1);
+}
+
+::ng-deep .p-toast .p-toast-message.p-toast-message-success {
+    background-color: rgba(201,49,127,1);
+    color: white;
+    border: none;
+}
+
+::ng-deep .p-toast .p-toast-message.p-toast-message-success span{
+    color: white;
+}
+
+::ng-deep .p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon{
+    color: white;
+}
+
+.intro-box ::ng-deep .p-card .intro-title {
+    color: rgba(201,49,127,1);
+}

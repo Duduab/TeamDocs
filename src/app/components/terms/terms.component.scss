@@ -1,0 +1,132 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.container {
+    width: 100%;
+    padding: 25px;
+
+    .main-title {
+        font-size: 55px;
+        font-weight: 700;
+        margin-left: 2px;
+    }
+
+    .terms-search {
+        padding-bottom: 20px;
+        margin-left: -7px;
+
+        input {
+            padding-left: 30px;
+        }
+
+        .info {
+            font-size: 1.5rem;
+            color: #2D2B43;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .search {
+            margin-left: 14px;
+            margin-top: -10px;
+
+            
+        }
+        .refresh-btn ::ng-deep .p-button {
+            background-color: #2D2B43;
+            border: 1px solid #2D2B43;
+        }
+
+        .refresh-btn ::ng-deep .p-button:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .refresh-btn ::ng-deep .p-button:active {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+
+
+        ::ng-deep p-dialog-content {
+            padding: 45px;
+        }
+
+        ::ng-deep .p-dialog-title {
+            text-decoration: underline;
+        }
+
+        ::ng-deep .p-dialog {
+            margin-bottom: 50px;
+            width: 30vw;
+        }
+
+        .gif-intro {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+        }
+
+    }
+
+    .card {
+        box-shadow: 5px 5px 30px -22px rgb(0 0 0 / 75%);
+        border-radius: 5px;
+        height: 200px;
+        width: 200px;
+        cursor: pointer;
+        position: relative;
+        transform-style: preserve-3d;
+        margin: 15px;
+        font-weight: 600;
+
+        .con-intro {
+            font-size: 15px;
+        }
+    }
+
+    .card:hover {
+        background-color: #2D2B43;
+        color: white;
+        .back {
+            text-decoration: underline;
+            font-size: 20px;
+            margin-top: -50px;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .front {
+            color: white;
+            font-weight: 500;
+        }
+
+    }
+
+    .face {
+        display: block;
+    }
+
+    .back {
+        padding-top: 40%;
+        font-size: 25px;
+    }
+
+    .front {
+        color: white;
+        font-weight: 700;
+    }
+
+    .rfs-btn {
+        background-color: #2D2B43; 
+        border: 1px solid #2D2B43;
+    }
+}
+
+.intro ::ng-deep .p-dialog-content {
+    padding: 45px;
+}
+
+.loader {
+    padding: 35%;
+    margin: 0 auto;
+    margin-top: -400px;
+}
+

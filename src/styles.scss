@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body * {
+    font-family: 'Montserrat', sans-serif;
+
+    .overlay {
+        background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+        pointer-events: none;
+
+        .amd-title {
+            background: white;
+            -webkit-background-clip: text;
+            font-weight: 800;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .amd-title {
+        background: -webkit-linear-gradient(rgba(201,49,127,1), rgba(249,184,72,1));
+        -webkit-background-clip: text;
+        font-weight: 800;
+        -webkit-text-fill-color: transparent;
+    } 
+    
+}

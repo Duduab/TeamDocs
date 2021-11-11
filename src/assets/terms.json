@@ -1,0 +1,94 @@
+{
+    "terms": [
+      {
+        "term": "SOA",
+        "shortcut": "service oriented architecture",
+        "introduction": "an old system that act as a layer between Amdocs and external systems exposing the APIs in a standard way."
+      },
+      {
+        "term": "KT",
+        "shortcut": "Knowledge transfer",
+        "introduction": "done for new developers, UAT, security testers."
+      },
+      {
+        "term": "JWT",
+        "shortcut": "json web token",
+        "introduction": "Standard token which."
+      },
+      {
+        "term": "App DB",
+        "shortcut": "Application database",
+        "introduction": "stored data that is created/updated by the application."
+      },
+      {
+        "term": "Ref DB",
+        "shortcut": "Reference database",
+        "introduction": "stored constant data which is not change during runtime – refreshed once a day."
+      },
+      {
+        "term": "DBA",
+        "shortcut": "Database admin",
+        "introduction": "approving new/updated tables and SQLs."
+      },
+      {
+        "term": "CI/CD",
+        "shortcut": "continue integration",
+        "introduction": "continue integration/deployment/delivery."
+      },
+      {
+        "term": "ASM",
+        "shortcut": "Amdocs security management system",
+        "introduction": "this application manage the users, profile and roles in our system."
+      },
+      {
+        "term": "TRN",
+        "shortcut": "Temporary phone number",
+        "introduction": "Temporary phone number."
+      },
+      {
+        "term": "EPC",
+        "shortcut": "Amdocs application",
+        "introduction": "the user can define different plans and promotions to be available for the clients."
+      },
+      {
+        "term": "Account",
+        "shortcut": "BAN/Customer ",
+        "introduction": "the paying entity id."
+      },
+      {
+        "term": "OBO",
+        "shortcut": "on Behalf of",
+        "introduction": "on Behalf of"
+      },
+      {
+        "term": "NPA-NXX",
+        "shortcut": "NPA-NXX",
+        "introduction": "the first 6 digits of the phone number defining geographical area."
+      },
+      {
+        "term": "BYOD",
+        "shortcut": "Bring your own device",
+        "introduction": "Bring your own device."
+      },
+      {
+        "term": "Wallet",
+        "shortcut": "virtual wallet which contain saved credit cards",
+        "introduction": "virtual wallet which contain saved credit cards."
+      },
+      {
+        "term": "Cycle",
+        "shortcut": "the day in the month that the account will be charged",
+        "introduction": "the day in the month that the account will be charged."
+      },
+      {
+        "term": "VC",
+        "shortcut": "shortcut of VC",
+        "introduction": "short introduction about VC"
+      },
+      {
+        "term": "USV",
+        "shortcut": "shortcut of USV",
+        "introduction": "short introduction about USV"
+      }
+    ]
+  }

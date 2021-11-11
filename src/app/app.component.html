@@ -1,0 +1,14 @@
+<div  [ngClass]="{'overlay' : displayBasic}">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="terms-app">
+    <app-terms></app-terms>
+  </div>
+  <div class="add-term-btn">
+    <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-xl" (click)="showIntroduction()"></button>
+  </div>
+  <p-dialog header="New Term" position="right" class="add-term" [(visible)]="displayBasic"  showEffect="fade" [baseZIndex]="9">
+    <app-add-new-term></app-add-new-term>
+  </p-dialog>  
+</div>
