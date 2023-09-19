@@ -1,0 +1,8 @@
+.event-container {
+  padding: 5%;
+}
+
+::ng-deep .p-calendar .p-datepicker {
+  min-width: 100%;
+  width: 800px;
+}

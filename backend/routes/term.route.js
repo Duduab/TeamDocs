@@ -4,9 +4,10 @@ const termRoute = express.Router();
 // Term model
 let Term = require('../models/terms');
 
+
 // Add Term
 termRoute.route('/addTerm').post((req, res, next) => {
-  Term.create(req.body, (error, data) => {
+  Term.Term.create(req.body, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -15,9 +16,10 @@ termRoute.route('/addTerm').post((req, res, next) => {
   })
 });
 
+
 // Get All Terms
 termRoute.route('/').get((req, res) => {
-  Term.find((error, data) => {
+  Term.Term.find((error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -28,7 +30,7 @@ termRoute.route('/').get((req, res) => {
 
 // Get single term
 termRoute.route('/read/:id').get((req, res) => {
-  Term.findById(req.params.term, (error, data) => {
+  Term.Term.findById(req.params.term, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -40,7 +42,7 @@ termRoute.route('/read/:id').get((req, res) => {
 
 // Update Terms
 termRoute.route('/update/:id').put((req, res, next) => {
-  Term.findByIdAndUpdate(req.params.id, {
+  Term.Term.findByIdAndUpdate(req.params.id, {
     $set: req.body
   }, (error, data) => {
     if (error) {
@@ -55,7 +57,7 @@ termRoute.route('/update/:id').put((req, res, next) => {
 
 // Delete term
 termRoute.route('/delete/:id').delete((req, res, next) => {
-  Term.findOneAndRemove(req.params.id, (error, data) => {
+  Term.Term.findOneAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {

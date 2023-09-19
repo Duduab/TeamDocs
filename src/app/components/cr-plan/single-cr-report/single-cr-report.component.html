@@ -1,0 +1,56 @@
+<div class="container p-5">
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Description</span>
+    </div>
+    <div class="col-10">
+          <span>
+      Sprint PDF Bills on Account Hub Samson - TEST ONLY
+    </span>
+    </div>
+  </div>
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Jira link</span>
+    </div>
+    <div class="col-10">
+      <span>
+           <a href="#">www.google.com</a>
+      </span>
+    </div>
+  </div>
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Assignee's</span>
+    </div>
+    <div class="col-10">
+      <p-avatarGroup label="P" class="py-2">
+        <div  *ngFor="let assignee of assigness">
+          <p-avatar image="{{assignee.image}}" styleClass="mr-2" size="large" shape="circle"></p-avatar>
+        </div>
+      </p-avatarGroup>
+    </div>
+  </div>
+  <p-divider></p-divider>
+  <div *ngFor="let check of checkList" class="p-field-checkbox py-1">
+    <p-checkbox name="group2" value="category"
+                [value]="check"
+                [(ngModel)]="selectedCategories"
+                [inputId]="check.key"
+                [disabled]="check.key === 'R'"
+    ></p-checkbox>
+    <label [for]="check.key" class="mx-2">{{check.name}}</label>
+    <p-divider></p-divider>
+  </div>
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Progress</span>
+    </div>
+    <div class="col-10">
+      <div class="progress-bar-cr">
+        <p-progressBar [ngClass]="'customSubProgress'" [value]="89"></p-progressBar>
+      </div>
+    </div>
+  </div>
+</div>
+

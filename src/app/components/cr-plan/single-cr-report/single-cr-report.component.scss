@@ -1,0 +1,24 @@
+.assign-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #c9317f;
+}
+
+
+
+::ng-deep .customSubProgress .p-progressbar .p-progressbar-value {
+  background: #c9317f;
+  opacity: 0.85;
+}
+
+::ng-deep .customSubProgress .p-progressbar-determinate .p-progressbar-label {
+  color: white;
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+::ng-deep .customSubProgress .p-progressbar {
+  border-radius: 13px;
+  height: 20px;
+  margin-top: 6px;
+}

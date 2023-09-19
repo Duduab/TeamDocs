@@ -1,0 +1,54 @@
+<div class="new-term-form" *ngIf="loader">
+  <div class="pt-3">
+    <p class="fw-bold">Please Fill Term Inputs</p>
+    <div class="intro-box py-2">
+      <p-card>
+        <p><b class="intro-title">Term </b>- minimum 2 characters</p>
+        <p><b class="intro-title">Short Cut </b>- words of the terms shortcut</p>
+        <p><b class="intro-title">Introduction </b>- maximum 40 characters</p>
+      </p-card>
+    </div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group pb-1">
+            <span class="p-float-label">
+                <input formControlName="term" id="float-input" type="text" class="form-control" pInputText>
+                <label for="float-input">Term</label>
+            </span>
+      <div *ngIf="f.term.touched && f.term.invalid">
+        <div *ngIf="f.term.errors && f.term.errors.required" class="text-danger">Term Name is required.</div>
+      </div>
+    </div>
+    <div class="form-group pb-1">
+            <span class="p-float-label">
+                <input formControlName="shortcut" id="float-input" type="text" class="form-control" pInputText>
+                <label for="float-input">Shortcut</label>
+            </span>
+
+      <div *ngIf="f.shortcut.touched && f.shortcut.invalid">
+        <div *ngIf="f.shortcut.errors && f.shortcut.errors.required" class="text-danger">Shortcut Of Term is required.</div>
+      </div>
+    </div>
+    <div class="form-group pb-1">
+            <span class="p-float-label">
+                <textarea formControlName="introduction" id="float-input" type="textarea" class="form-control" pInputText></textarea>
+                <label for="float-input">Introduction</label>
+            </span>
+
+      <div *ngIf="f.introduction.touched && f.introduction.invalid">
+        <div *ngIf="f.introduction.errors && f.introduction.errors.required" class="text-danger">Introduction is required.</div>
+      </div>
+    </div>
+
+    <div class="row pt-5">
+      <div class="col-sm-12">
+        <button pButton type="submit" label="Create Term" icon="pi pi-plus-circle" class="p-button-lg"></button>
+      </div>
+    </div>
+  </form>
+</div>
+<div *ngIf="!loader" class="loader">
+  <app-loader></app-loader>
+</div>
+<p-toast position="bottom-center" class="custom-toast"></p-toast>
+

@@ -1,51 +1,59 @@
-<div *ngIf="loader" class="container">
-    <div class="row main-title amd-title">
-        <p>Amdocs Terms Engine</p>
+<body>
+<div *ngIf="loader" class="container" >
+  <div class="row main-title amd-title">
+    <p>Amdocs Terms Engine</p>
+  </div>
+  <div class="row terms-search">
+    <div class="col-8 p-input-icon-left">
+      <i class="pi pi-search search"></i>
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching Terms">
     </div>
-    <div class="row terms-search">
-        <div class="col-8 p-input-icon-left">
-            <i class="pi pi-search search"></i>
-            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching Terms">
-        </div>
-        <div class="col-2 intro">
-            <i class="pi pi-info-circle info" (click)="showIntroduction()"></i>
-            <p-dialog
-                header="Intoruction" [(visible)]="displayBasic"  [baseZIndex]="9">
-                <p><b>Search the Term -</b> by typing at least 2 letters of the term</p>
-                <img class="gif-intro" src="../../../assets/images/search.gif" alt="this slowpoke moves"  width="240" />
-                <br/><br/>
-                <p><b>Hover on the Term -</b> To see the Term Definition</p>
-                <img class="gif-intro" src="../../../assets/images/hover.gif" alt="this slowpoke moves"  width="240" />
-                <br/><br/>
-                <p><b>Click on the Term -</b> To see the Term introduction</p>
-                <img class="gif-intro" src="../../../assets/images/click.gif" alt="this slowpoke moves"  width="240" />
-            </p-dialog>
-        </div>
-        <div class="col-2 refresh-btn text-left">
-            <button class="rfs-btn" pButton type="button" icon="pi pi-refresh" (click)="refresh()" class="p-button-rounded"></button>
-        </div>
+    <div class="col-2 intro">
+      <i class="pi pi-info-circle info" (click)="showQuickIntroduction()"></i>
+      <p-dialog
+        header="Intoruction" [(visible)]="displayIntroBasic"  [baseZIndex]="9">
+        <p><b>Search the Term -</b> by typing at least 2 letters of the term</p>
+        <img class="gif-intro" src="../../../assets/images/search.gif" alt="this slowpoke moves"  width="240" />
+        <br/><br/>
+        <p><b>Hover on the Term -</b> To see the Term Definition</p>
+        <img class="gif-intro" src="../../../assets/images/hover.gif" alt="this slowpoke moves"  width="240" />
+        <br/><br/>
+        <p><b>Click on the Term -</b> To see the Term introduction</p>
+        <img class="gif-intro" src="../../../assets/images/click.gif" alt="this slowpoke moves"  width="240" />
+      </p-dialog>
     </div>
-    <div class="row" *ngIf="( terms | filter:searchText) as result">
-        <div 
-            *ngFor="let item of result" 
-            class="col-4-xs card"
-            (click)="showT(item)">
-            <div class="face back text-center">
-                <p>{{item.term}}</p>
-            </div>
-            <div *ngIf="item.showText" class="face front text-center fw-bold">
-                <p>{{item.shortcut}}</p>
-            </div>
-            <div *ngIf="!item.showText" class="face front text-center con-intro">
-                <p>{{item.introduction}}</p>
-            </div>
-        </div>
-        <p class="p-3" *ngIf="result.length == 0">
-            No Results
-        </p>
+    <div class="col-2 refresh-btn text-left">
+      <button class="rfs-btn" pButton type="button" icon="pi pi-refresh" (click)="refresh()" class="p-button-rounded"></button>
     </div>
+  </div>
+  <div class="row" *ngIf="( terms | filter:searchText) as result">
+    <div
+      *ngFor="let item of result"
+      class="col-4-xs card"
+      (click)="showT(item)">
+      <div class="face back text-center">
+        <p>{{item.term}}</p>
+      </div>
+      <div *ngIf="item.showText" class="face front text-center fw-bold">
+        <p>{{item.shortcut}}</p>
+      </div>
+      <div *ngIf="!item.showText" class="face front text-center con-intro">
+        <p>{{item.introduction}}</p>
+      </div>
+    </div>
+    <p class="p-3" *ngIf="result.length == 0">
+      No Results
+    </p>
+  </div>
 </div>
 <div *ngIf="!loader" class="loader">
-    <app-loader></app-loader>
+  <app-loader></app-loader>
 </div>
-  
+<div class="add-term-btn">
+  <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-xl" (click)="showIntroduction()"></button>
+</div>
+<p-dialog header="Add New Term" position="right" class="add-term" [(visible)]="displayBasic"  showEffect="fade" [baseZIndex]="9">
+  <app-add-new-term></app-add-new-term>
+</p-dialog>
+</body>
+

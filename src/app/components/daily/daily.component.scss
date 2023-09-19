@@ -1,0 +1,187 @@
+.report-item {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .report-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 0.3rem;
+    box-shadow: 5px 5px 30px -22px rgb(0 0 0 / 75%);
+    text-align: center;
+    padding: 2rem 0;
+    height: 600px;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #2D2B43;
+  }
+
+
+  .badge-stat span {
+    position: relative !important;
+    top: -12px !important;
+  }
+
+  .report-image {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  }
+}
+
+::ng-deep .p-carousel {
+  padding: 5%;
+}
+
+::ng-deep .p-avatar.p-avatar-circle {
+  height: 30%;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #c9317f;
+}
+
+.add-term-btn {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  border-radius:50px;
+  text-align:center;
+}
+
+
+.add-term-btn ::ng-deep .p-button {
+  width: 75px;
+  height: 75px;
+  background: #2D2B43;
+  border: 1px solid #2D2B43;
+}
+
+
+.add-term-btn ::ng-deep .p-button:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  transition: 0.3s;
+  span {
+    font-size: 22px;
+    transition: 0.1s;
+  }
+}
+
+.add-term-btn ::ng-deep .p-button:active {
+  box-shadow: none;
+  color: rgb(45, 43, 67);
+  border: 2px solid rgb(45, 43, 67);
+  transition: 0.2s;
+
+}
+
+.add-term  ::ng-deep .p-dialog {
+  height: 100%;
+  width: 25%;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.cr-report  ::ng-deep .p-dialog {
+  height: 100%;
+  width: 90%;
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.add-term ::ng-deep .p-dialog .p-dialog-header {
+  background: rgba(201,49,127,1);
+  color: #fff;
+}
+
+.cr-report ::ng-deep .p-dialog .p-dialog-header {
+  background: rgba(201,49,127,1);
+  color: #fff;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+  background: rgb(45, 43, 67);
+  color: #fff;
+}
+
+.terms-search {
+  padding-bottom: 20px;
+  margin-left: -7px;
+
+  input {
+    padding-left: 30px;
+  }
+
+  .info {
+    font-size: 1.5rem;
+    color: #2D2B43;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+
+  .search {
+    margin-left: 14px;
+    margin-top: -10px;
+
+
+  }
+  .refresh-btn ::ng-deep .p-button {
+    background-color: #2D2B43;
+    border: 1px solid #2D2B43;
+  }
+
+  .refresh-btn ::ng-deep .p-button:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  .refresh-btn ::ng-deep .p-button:active {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+
+
+  ::ng-deep p-dialog-content {
+    padding: 45px;
+  }
+
+  ::ng-deep .p-dialog-title {
+    text-decoration: underline;
+  }
+
+  ::ng-deep .p-dialog {
+    margin-bottom: 50px;
+    width: 30vw;
+  }
+
+  .gif-intro {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  }
+
+}
+
+::ng-deep .customDailyProgress .p-progressbar .p-progressbar-value {
+  background: #c9317f;
+  opacity: 0.85;
+}
+
+::ng-deep .customDailyProgress .p-progressbar-determinate .p-progressbar-label {
+  color: white;
+  font-size: 14px;
+  margin-top: -2px;
+}
+
+::ng-deep .customDailyProgress .p-progressbar {
+  border-radius: 13px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+::ng-deep .p-chip.custom-chip {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}

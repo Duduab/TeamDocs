@@ -1,0 +1,52 @@
+<div class="container p-5">
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Tasks</span>
+    </div>
+    <div class="col-10">
+      <span>
+           6
+      </span>
+    </div>
+  </div>
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Sub Tasks</span>
+    </div>
+    <div class="col-10">
+      <span>
+           16
+      </span>
+    </div>
+  </div>
+  <div class="row py-5">
+    <div class="col-12">
+      <p-accordion [multiple]="true">
+        <div class="tasks-container" *ngFor="let task of tasks">
+          <p-accordionTab header="{{task.desc}}">
+            <div *ngFor="let subtask of task.subTasks" class="p-field-checkbox py-1">
+              <p-checkbox name="group2" value="category"
+                          [value]="subtask"
+                          [inputId]="subtask.key"
+              ></p-checkbox>
+              <label [for]="subtask.key" class="mx-2">{{subtask.desc}}</label>
+              <p-divider></p-divider>
+            </div>
+          </p-accordionTab>
+        </div>
+      </p-accordion>
+    </div>
+  </div>
+  <p-divider></p-divider>
+  <div class="row py-2">
+    <div class="col-2">
+      <span class="assign-title">Progress</span>
+    </div>
+    <div class="col-10">
+      <div class="progress-bar-cr">
+        <p-progressBar [ngClass]="'customSubProgress'" [value]="89"></p-progressBar>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,46 @@
+<body [ngClass]="{'overlay' : displayBasic}">
+  <div class="card">
+    <p-dataView #dv [value]="products" [paginator]="true" [rows]="9" filterBy="name"
+                [sortField]="sortField" [sortOrder]="sortOrder" layout="grid">
+      <ng-template pTemplate="header">
+        <div class="flex flex-column md:flex-row md:justify-content-between">
+          <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Progress" (onChange)="onSortChange($event)" styleClass="mb-2 md:mb-0"></p-dropdown>
+          <span class="p-input-icon-left mb-2 md:mb-0 mx-2">
+                    <i class="pi pi-search"></i>
+                    <input style="width: 120%;" type="search" pInputText placeholder="Search by CR/BSW number">
+                </span>
+        </div>
+      </ng-template>
+      <ng-template let-product pTemplate="gridItem">
+        <div class="col-12 md:col-4">
+          <div class="product-grid-item card" (click)="openCrReport(product)">
+            <div class="product-grid-item-top">
+              <div>
+                <i *ngIf="product.category === 'Done'" style="color: green" class="pi pi-check-circle product-category-icon"></i>
+                <i *ngIf="product.category === 'Pending'" style="color: orange" class="pi pi-spinner product-category-icon"></i>
+                <span [ngStyle]="{'color': product.category === 'Done' ? 'green' : 'orange' }" class="product-category">{{product.category}}</span>
+              </div>
+            </div>
+            <div class="product-grid-item-content">
+              <div class="product-name">{{product.name}}</div>
+              <div class="product-description">{{product.description}}</div>
+              <p-progressBar  [ngClass]="'customProgress'" [value]="product.price"></p-progressBar>
+            </div>
+            <div class="product-grid-item-bottom py-2">
+              <span class="product-price">{{product.price}}%</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
+  </div>
+  <div class="add-term-btn">
+    <button pButton pRipple type="button" icon="pi pi-plus" class="p-button-rounded p-button-xl" (click)="showIntroduction()"></button>
+  </div>
+  <p-dialog header="Add New CR" position="right" class="add-term" [(visible)]="displayBasic"  showEffect="fade" [baseZIndex]="9">
+    <app-add-new-cr></app-add-new-cr>
+  </p-dialog>
+  <p-dialog header="{{crTitle}}" position="center" class="cr-report" [(visible)]="displayCrBasic"  showEffect="fade" [baseZIndex]="9">
+    <app-single-cr-report></app-single-cr-report>
+  </p-dialog>
+</body>

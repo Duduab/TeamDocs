@@ -1,43 +1,100 @@
+// Requiring mongoose module
+
 let express = require('express'),
-   path = require('path'),
-   mongoose = require('mongoose'),
-   cors = require('cors'),
-   bodyParser = require('body-parser'),
-   dbConfig = require('./database/db');
-   
-//Errors
+  path = require('path'),
+  mongoose = require('mongoose'),
+  cors = require('cors'),
+  bodyParser = require('body-parser'),
+  dbConfig = require('./database/db');
+
+//Erros
 let createError = require('http-errors');
-// Connecting with mongo db
+
+
+const { Cr, Term } = require('../backend/models/terms');
+
 mongoose.Promise = global.Promise;
+// Connecting to database
+mongoose.connect('mongodb+srv://dudu:Abutbul2605@clusteramdocs.idtoq.mongodb.net/?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    // useFindAndModify: false
+  }).then(() => {
+    console.log('Database sucessfully connected')
 
-mongoose.connect("mongodb://dudu:Abutbul2605@clusteramdocs-shard-00-00.idtoq.mongodb.net:27017,clusteramdocs-shard-00-01.idtoq.mongodb.net:27017,clusteramdocs-shard-00-02.idtoq.mongodb.net:27017/terms?ssl=true&replicaSet=atlas-1gwc64-shard-0&authSource=admin&retryWrites=true&w=majority", {
-   useNewUrlParser: true,
-   //useFindAndModify: false,
-   useUnifiedTopology: true
-}).then(() => {
-      console.log('Database sucessfully connected')
-
-   },
-   error => {
-      console.log('Database could not connected: ' + error)
-   }
+  },
+  error => {
+    console.log('Database could not connected: ' + error)
+  }
 )
+var dbcourse = [];
+
+// Finding courses of category Database
+Cr.find({ category: "Database" })
+  .then(data => {
+    console.log("Database Courses:")
+    console.log(data);
+
+    data.map((d, k) => {
+      dbcourse.push(d._id);
+    })
+  })
+  .catch(error => {
+    console.log(error);
+  })
+
+Term.find({ category: "Database" })
+  .then(data => {
+    console.log("Database Courses:")
+    console.log(data);
+
+    data.map((d, k) => {
+      dbcourse.push(d._id);
+    })
+  })
+  .catch(error => {
+    console.log(error);
+  })
+
+
+
+//
+
+// // Connecting with mongo db
+// mongoose.Promise = global.Promise;
+// //
+// mongoose.connect("mongodb+srv://dudu:Abutbul2605@clusteramdocs.idtoq.mongodb.net/?retryWrites=true&w=majority", {
+//    useNewUrlParser: true,
+//    useFindAndModify: false,
+//    useUnifiedTopology: true
+// }).then(() => {
+//       console.log('Database sucessfully connected')
+//
+//    },
+//    error => {
+//       console.log('Database could not connected: ' + error)
+//    }
+// )
+
+// const { Term, Cr } = require('./terms');
+
 
 // Setting up port with express js
 const termRoute = require('../backend/routes/term.route')
+const crRoute = require('../backend/routes/cr.route')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
    extended: false
 }));
-app.use(cors()); 
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
 app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
-app.use('/api', termRoute)
+app.use('/api', termRoute);
+app.use('/api', crRoute);
 
 
-
-// Create port
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
   console.log('Connected to port ' + port)

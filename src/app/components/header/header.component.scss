@@ -1,3 +1,29 @@
 .logo img{
-    width: 20%;
+    width: 50%;
 }
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+  opacity: 0.8;
+  color: azure;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+  color: azure;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text:hover {
+  color: rgb(45, 43, 67);
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+  opacity: 1;
+  color: #2D2B43 !important;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem:focus {
+  border: none;
+}
+
+
+
+
+

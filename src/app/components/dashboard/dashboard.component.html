@@ -1,0 +1,157 @@
+<div class="container">
+    <div class="dash-cr">
+      <p-divider align="left">
+    <span class="p-tag">
+      <i class="pi pi-sitemap"></i>
+        CR
+    </span>
+      </p-divider>
+      <div class="row mx-5 my-5 d-flex align-items-center">
+        <div class="col-2">
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-desktop p-mr-4 p-text-secondary"
+                pBadge
+                style="font-size: 2rem"
+                value="2"
+              ></i>
+              <span class="badge-title px-4"><b>CR</b> Completed</span>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-desktop p-mr-4 p-text-secondary"
+                pBadge
+                style="font-size: 2rem"
+                value="2"
+                severity="success"
+              ></i>
+              <span class="badge-title px-4"><b>APCM</b> Completed</span>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-desktop p-mr-4 p-text-secondary"
+                pBadge
+                style="font-size: 2rem"
+                value="2"
+                severity="warning"
+              ></i>
+              <span class="badge-title px-4"><b>Defect's</b> Completed</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <p-divider layout="vertical"></p-divider>
+        </div>
+        <div class="col-4 text-center">
+          <p-chart type="line" [data]="data"></p-chart>
+        </div>
+        <div class="col-1">
+          <p-divider layout="vertical"></p-divider>
+        </div>
+        <div class="col-4 text-center">
+          <p-chart type="doughnut" [data]="subData" [style]="{'width': '300px', 'height': '300px'}"></p-chart>
+        </div>
+      </div>
+    </div>
+    <div class="dash-terms">
+      <p-divider align="left">
+    <span class="p-tag">
+      <i class="pi pi-users"></i>
+        Daily
+    </span>
+      </p-divider>
+      <div class="row mx-5 my-5 d-flex align-items-center">
+        <div class="col-2">
+          <div class="row py-3" *ngFor="let user of users">
+            <div>
+              <p-avatar image="{{user.image}}" styleClass="mr-2" size="large" shape="circle"></p-avatar>
+              <span class="badge-title px-4"><b style="color: #c9317f">{{user.name}}</b> - {{user.per}}%</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <p-divider layout="vertical"></p-divider>
+        </div>
+        <div class="col-4 text-center">
+          <p-chart type="line" [data]="data"></p-chart>
+        </div>
+        <div class="col-1">
+          <p-divider layout="vertical"></p-divider>
+        </div>
+        <div class="col-4 text-center">
+          <p-chart type="doughnut" [data]="subData"></p-chart>
+        </div>
+      </div>
+    </div>
+    <div class="dash-daily">
+      <p-divider align="left">
+    <span class="p-tag">
+      <i class="pi pi-calendar"></i>
+        Events
+    </span>
+      </p-divider>
+      <div class="row mx-5 my-5 d-flex align-items-center">
+        <div class="col-5">
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-calendar p-mr-4 p-text-secondary"
+                style="font-size: 2rem"
+                value="2"
+              ></i>
+              <span class="badge-title px-4"><b style="color: #c9317f">10:30: </b>Daily</span>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-calendar p-mr-4 p-text-secondary"
+                style="font-size: 2rem"
+                value="2"
+              ></i>
+              <span class="badge-title px-4"><b style="color: #c9317f">11:30: </b>Cakes</span>
+            </div>
+          </div>
+          <div class="row py-3">
+            <div>
+              <i
+                class="pi pi-calendar p-mr-4 p-text-secondary"
+                style="font-size: 2rem"
+                value="2"
+              ></i>
+              <span class="badge-title px-4"><b style="color: #c9317f">12:30: </b>Doriel BirthDay!</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <p-divider layout="vertical"></p-divider>
+        </div>
+        <div class="col-5">
+          <p-calendar [(ngModel)]="date14" [inline]="true" [showWeek]="true"></p-calendar>
+        </div>
+      </div>
+    <div class="dash-events">
+      <p-divider align="left">
+    <span class="p-tag">
+      <i class="pi pi-list"></i>
+        Terms
+    </span>
+      </p-divider>
+      <div class="row mx-5 my-5 d-flex align-items-center text-center">
+        <div class="col-4">
+        </div>
+        <div class="col-4 text-center">
+          <p-chart type="doughnut" [data]="termsData" [style]="{'width': '300px', 'height': '300px'}"></p-chart>
+        </div>
+        <div class="col-4">
+        </div>
+
+      </div>
+    </div>
+</div>
+</div>

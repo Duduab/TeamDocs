@@ -8,13 +8,13 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 
 export class ApiService {
-  
+
   baseUri:string = 'http://localhost:4000/api';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
 
-  // Create
+  // Create Term
   createTerm(data: any): Observable<any> {
     let url = `${this.baseUri}/addTerm`;
     return this.http.post(url, data)
@@ -23,8 +23,22 @@ export class ApiService {
       )
   }
 
+  // Create CR
+  createCr(data: any): Observable<any> {
+    let url = `${this.baseUri}/addCr`;
+    return this.http.post(url, data)
+      .pipe(
+        catchError(this.errorMgmt)
+      )
+  }
+
   // Get all terms
   getTerms() {
+    return this.http.get(`${this.baseUri}`);
+  }
+
+  // Get all CR List
+  getCrList() {
     return this.http.get(`${this.baseUri}`);
   }
 
@@ -55,7 +69,7 @@ export class ApiService {
     )
   }
 
-  // Error handling 
+  // Error handling
   errorMgmt(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

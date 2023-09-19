@@ -1,0 +1,94 @@
+{
+    "checkList": [
+      {
+        "name": "Read the US carefully on Jira",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Design Review - diagram, one note, close thing with all relevant people (PO, developer, tester)\n",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Add tasks to Jira",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Check data fencing",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "null pointer exception validation",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Development - code, peer to peer  review (just to hear another opinion )",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Testing - unit test and Junits",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Postman collection",
+        "check": true,
+        "key": "R"
+      },
+      {
+        "name": "Check sonar violations (we can get here most of the items that raised in code review) ",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Code inspection \\ Code review with SM and expert\\architect",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Scrum Testing",
+        "check": true,
+        "key": "R"
+      },
+      {
+        "name": "Push the code, swagger & YML to gitlab",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Deploy to dev env + test it on dev",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Demo to  PO",
+        "check": true,
+        "key": "R"
+      },
+      {
+        "name": "Clearwater",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "RN - write every change that u add in this US",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "Add/Update dependency.yml (Canvass \\ Asset)",
+        "check": true,
+        "key": "A"
+      },
+      {
+        "name": "IUT",
+        "check": true,
+        "key": "A"
+      }
+    ]
+  }

@@ -7,7 +7,6 @@
 }
 
 .add-term-btn {
-    
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -31,12 +30,12 @@
     transition: 0.3s;
     span {
         font-size: 22px;
-        transition: 0.1s;   
+        transition: 0.1s;
     }
 }
- 
+
 .add-term-btn ::ng-deep .p-button:active {
-    box-shadow: none; 
+    box-shadow: none;
     color: rgb(45, 43, 67);
     border: 2px solid rgb(45, 43, 67);
     transition: 0.2s;
@@ -59,9 +58,6 @@
     color: #fff;
 }
 
-.add-term ::ng-deep .p-dialog .p-dialog-content {
-    background: url('../assets/images/circles-pattern-v1-image.png');
-}
 
 ::ng-deep .p-dialog .p-dialog-header-close-icon {
     color: white;
